@@ -7,3 +7,6 @@ sentence_transformers
 chromadb
 python-telegram-bot
 tqdm
+pypdfium2
+fastapi
+python-multipart

@@ -13,3 +13,6 @@ TextSplitter:
   #therefore we set the chunksize to 1024 characters approximating 256 tokens
   chunk_size: 1024 
   chunk_overlap: 52
+
+sqlite:
+  db_path: 'sqlite_db/telemetry.db'

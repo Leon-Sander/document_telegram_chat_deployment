@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  document_chat_fastapi_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.fastapi
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+
+  document_chat_telegram_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.telegram
+    volumes:
+      - .:/app
+    environment:
+      - TOKENIZERS_PARALLELISM=false
