@@ -13,7 +13,7 @@ class retrieval_chat():
         embedding_function = load_embeddings()
         db = load_db(embedding_function)
 
-        self.qa_model = RetrievalQA.from_llm(llm=ChatOpenAI(temperature=0.1), retriever=db.as_retriever(kwargs={"k": 1}), return_source_documents=True)
+        self.qa_model = RetrievalQA.from_llm(llm=ChatOpenAI(temperature=0.1), retriever=db.as_retriever(kwargs={"k": 3}), return_source_documents=True)
 
     def answer_question(self, question :str):
         with get_openai_callback() as cb:
